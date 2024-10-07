@@ -1,0 +1,102 @@
+#inicio del programa 
+arreglo = []
+#inicio del menu 
+def menu():
+    while True:
+        print("\n--- Menú de opciones ---")
+        print("1. Ver elementos")
+        print("2. Agregar elemento")
+        print("3. Modificar elemento")
+        print("4. Eliminar elemento")
+        print("5. Salir")
+        opcion = input("Selecciona una opción: ")
+        if opcion.isdigit():
+            opcion = int(opcion)
+            if opcion == 1:
+                ver_elementos()
+            elif opcion == 2:
+                agregar_elemento()
+            elif opcion == 3:
+                modificar_elemento()
+            elif opcion == 4:
+                eliminar_elemento()
+            elif opcion == 5:
+                print("Saliendo del programa...")
+                break
+            else:
+                print("Error: la opción " + str(opcion) + " no existe.")
+        else:
+            print("Por favor, introduce un número válido.")
+#  ver los arreglos 
+def ver_elementos():
+    print("\n--- Ver elementos del arreglo ---")
+    if len(arreglo) == 0:
+        print("El arreglo está vacío.")
+    else:
+        print("Elementos del arreglo: " + str(arreglo))
+# agregar elementos 
+def agregar_elemento ():
+    print("\n--- Agregar elemento ---")
+    ver_elementos()
+    while True:
+        nuevo_elemento = input("Introduce el elemento a agregar (letra o número): ")
+        
+        if nuevo_elemento.isalpha():
+            arreglo.append(nuevo_elemento)
+            print("Nuevo arreglo: " + str(arreglo))
+        elif nuevo_elemento.isdigit():
+            numero = int(nuevo_elemento)
+            arreglo.append(numero)  # Aceptar tanto números pares como impares
+            print("Nuevo arreglo: " + str(arreglo))
+        else:
+            print("Entrada inválida. Por favor, introduce una letra o un número.")
+        
+        agregar_otro = input("¿Deseas agregar otro elemento? (s/n): ").lower()
+        if agregar_otro != 's':
+            break
+        #modificación del elemento 
+def modificar_elemento():
+    print("\n--- Modificar elemento ---")
+    ver_elementos()
+    if len(arreglo) > 0:
+        indice = input("Introduce el índice del elemento a modificar: ")
+        if indice.isdigit():
+            indice = int(indice)
+            if 0 <= indice < len(arreglo):
+                nuevo_valor = input("Introduce el nuevo valor (letra o número): ")
+                
+                if nuevo_valor.isalpha():
+                    arreglo[indice] = nuevo_valor
+                    print("Arreglo modificado: " + str(arreglo))
+                elif nuevo_valor.isdigit():
+                    numero = int(nuevo_valor)
+                    arreglo[indice] = numero  # Aceptar tanto números pares como impares
+                    print("Arreglo modificado: " + str(arreglo))
+                else:
+                    print("Entrada inválida. No se realizó ninguna modificación.")
+            else:
+                print("Índice fuera de rango.")
+        else:
+            print("Por favor, introduce un índice válido.")
+    else:
+        print("El arreglo está vacío, no hay elementos para modificar.")
+        # eliminar elementos 
+def eliminar_elemento():
+    print("\n--- Eliminar elemento ---")
+    ver_elementos()
+    if len(arreglo) > 0:
+        indice = input("Introduce el índice del elemento a eliminar: ")
+        if indice.isdigit():
+            indice = int(indice)
+            if 0 <= indice < len(arreglo):
+                eliminado = arreglo.pop(indice)
+                print("Elemento eliminado: " + str(eliminado))
+                print("Arreglo actual: " + str(arreglo))
+            else:
+                print("Índice fuera de rango.")
+        else:
+            print("Por favor, introduce un índice válido.")
+    else:
+        print("El arreglo está vacío, no hay elementos para eliminar.")
+menu()
+

@@ -1,0 +1,22 @@
+lista_compras = ["manzanas", "pan", "leche", "huevos", "cereal"]
+
+
+indice_final = len (lista_compras) - 1
+
+
+while indice_final > 0:
+    print("Lista actual de compras:", lista_compras)
+    respuesta = input("¿Deseas eliminar el último producto de la lista? (s/n): ")
+
+    if respuesta == "s" or respuesta == "S":
+        eliminado = lista_compras.pop() 
+        print("Producto eliminado:", eliminado)
+        indice_final -= 1  
+    elif respuesta == "n" or respuesta == "N":
+        print("No se ha eliminado ningún producto.")
+    else:
+        print("Respuesta no válida, por favor ingresa 's' o 'n'.")
+
+    print()  
+
+print("Lista final de compras:", lista_compras)

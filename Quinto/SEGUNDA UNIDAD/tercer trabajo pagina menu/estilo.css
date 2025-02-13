@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    background-color: #333;
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 20px; /* Ajusta el margen para posicionar el logo */
+    width: 50px; /* Ajusta el tamaño del logo */
+}
+
+.logo {
+    width: 100%; /* El logo ocupará todo el espacio disponible dentro del contenedor */
+    height: auto;
+}
+
+h1 {
+    color: black;
+    font-size: 32px;
+}
+
+.menu {
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 200px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+    display: flex;
+    flex-direction: row;
+}
+
+.submenu:hover .dropdown,
+.submenu:focus-within .dropdown {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+}
+
+.dropdown li {
+    padding: 10px;
+    display: inline-block;
+    color: #333;
+    border-right: 1px solid #ddd;
+}
+
+.dropdown li:last-child {
+    border-right: none;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    display: block;
+}
+
+.dropdown li a:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+#imagenes-zigzag {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#imagenes-zigzag .item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#imagenes-zigzag .item:nth-child(odd) {
+    flex-direction: row;
+}
+
+#imagenes-zigzag .item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#imagenes-zigzag img {
+    width: 150px;
+    height: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 8px;
+}
+
+#imagenes-zigzag p {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par o Impar</title>
+    <script>
+        let numero = prompt("Ingresa un número:");
+        numero = parseInt(numero);
+        
+        if (!isNaN(numero)) {
+            let resultado = (numero % 2 === 0) ? "Par" : "Impar";
+            alert("El número " + numero + " es: " + resultado);
+            console.log("El número " + numero + " es: " + resultado);
+        } else {
+            alert("Por favor, ingresa un número válido.");
+            console.log("Por favor, ingresa un número válido.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de IMC</title>
+    <script>
+        let peso = prompt("Ingresa tu peso en kg:");
+        let altura = prompt("Ingresa tu altura en metros:");
+        peso = parseFloat(peso);
+        altura = parseFloat(altura);
+        
+        if (!isNaN(peso) && !isNaN(altura) && altura > 0) {
+            let imc = peso / (altura * altura);
+            alert("Tu IMC es: " + imc.toFixed(2));
+            console.log("Tu IMC es: " + imc.toFixed(2));
+        } else {
+            alert("Por favor, ingresa valores numéricos válidos.");
+            console.log("Por favor, ingresa valores numéricos válidos.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

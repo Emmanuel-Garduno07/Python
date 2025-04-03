@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Multiplicar</title>
+    <script>
+        let N = prompt("Ingresa un número para ver su tabla de multiplicar:");
+        N = parseInt(N);
+        
+        if (!isNaN(N)) {
+            let resultadoTexto = "Tabla del " + N + "\n";
+            
+            for (let i = 1; i <= 10; i++) {
+                let resultado = N * i;
+                resultadoTexto += N + " x " + i + " = " + resultado + "\n";
+                console.log(N + " x " + i + " = " + resultado);
+            }
+            
+            alert(resultadoTexto);
+        } else {
+            alert("Por favor, ingresa un número válido.");
+            console.log("Por favor, ingresa un número válido.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Número</title>
+    <script>
+        let numero = prompt("Ingresa un número:");
+        numero = parseInt(numero);
+        
+        if (!isNaN(numero)) {
+            if (numero > 0) {
+                alert("El número es positivo.");
+                console.log("El número es positivo.");
+            } else if (numero < 0) {
+                alert("El número es negativo.");
+                console.log("El número es negativo.");
+            } else {
+                alert("El número es cero.");
+                console.log("El número es cero.");
+            }
+        } else {
+            alert("Por favor, ingresa un número válido.");
+            console.log("Por favor, ingresa un número válido.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

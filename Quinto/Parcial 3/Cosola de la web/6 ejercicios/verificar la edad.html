@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Voto</title>
+    <script>
+        let edad = prompt("Ingresa tu edad:");
+        edad = parseInt(edad);
+        
+        if (!isNaN(edad)) {
+            if (edad >= 18) {
+                alert("Usted puede votar.");
+                console.log("Usted puede votar.");
+            } else {
+                alert("Usted no puede votar.");
+                console.log("Usted no puede votar.");
+            }
+        } else {
+            alert("Por favor, ingresa un número válido.");
+            console.log("Por favor, ingresa un número válido.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

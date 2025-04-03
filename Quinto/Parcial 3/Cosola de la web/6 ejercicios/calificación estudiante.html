@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Calificación</title>
+    <script>
+        let calificacion = prompt("Ingresa tu calificación:");
+        calificacion = parseInt(calificacion);
+        
+        if (!isNaN(calificacion)) {
+            if (calificacion >= 96) {
+                alert("Calificación: Excelente calificación");
+                console.log("Calificación: Excelente calificación");
+            } else if (calificacion >= 80) {
+                alert("Calificación: Buena calificación");
+                console.log("Calificación: Buena calificación");
+            } else if (calificacion >= 70) {
+                alert("Calificación: Calificación aprobatoria");
+                console.log("Calificación: Calificación aprobatoria");
+            } else if (calificacion >= 60) {
+                alert("Calificación: Casi pero no, sigue participando");
+                console.log("Calificación: Casi pero no, sigue participando");
+            } else {
+                alert("Calificación: Es reprobatoria");
+                console.log("Calificación: Es reprobatoria");
+            }
+        } else {
+            alert("Por favor, ingresa un número válido.");
+            console.log("Por favor, ingresa un número válido.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

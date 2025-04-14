@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programa 1 - Agregar un solo elemento</title>
+</head>
+<body>
+  <h2>Agregar un solo elemento</h2>
+  <button onclick="agregarElemento()">Agregar</button>
+  <div id="contenido"></div>
+
+  <script>
+    var agregado = false;
+
+    function agregarElemento() {
+      if (agregado) {
+        alert("Ya agregaste un elemento.");
+        return;
+      }
+
+      var tipo = prompt("¿Qué quieres agregar? (p, h1, h2, h3, h4, h5)");
+      if (["p", "h1", "h2", "h3", "h4", "h5"].indexOf(tipo) === -1) {
+        alert("Solo puedes agregar p o encabezados h1-h5.");
+        return;
+      }
+
+      var texto = prompt("Escribe el contenido del " + tipo);
+      var nuevo = document.createElement(tipo);
+      nuevo.textContent = texto;
+      document.getElementById("contenido").appendChild(nuevo);
+      agregado = true;
+    }
+      var elementos = document.getElementsByTagName(tipo);
+      while (elementos.length > 0) {
+        elementos[0].remove();
+      }
+  </script>
+</body>
+</html>

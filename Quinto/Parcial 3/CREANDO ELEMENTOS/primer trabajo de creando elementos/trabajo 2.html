@@ -1,0 +1,43 @@
+<!-- programa2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programa 2 - Agregar hasta 5 elementos</title>
+</head>
+<body>
+  <h2>Agregar hasta 5 elementos</h2>
+  <button onclick="agregarElemento()">Agregar elemento</button>
+  <div id="contenedor"></div>
+
+  <script>
+    var contador = 0;
+
+    function agregarElemento() {
+      if (contador >= 5) {
+        alert("Ya agregaste 5 elementos.");
+        return;
+      }
+
+      var tipo = prompt("¿Qué quieres agregar? (p, h1, h2, h3, h4, h5)");
+      if (["p", "h1", "h2", "h3", "h4", "h5"].indexOf(tipo) === -1) {
+        alert("Tipo no válido.");
+        return;
+      }
+
+      var texto = prompt("Escribe el contenido del " + tipo);
+      var elemento = document.createElement(tipo);
+      elemento.textContent = texto;
+      document.getElementById("contenedor").appendChild(elemento);
+      contador++;
+    }
+
+ 
+
+      var elementos = document.getElementsByTagName(tipo);
+      while (elementos.length > 0) {
+        elementos[0].remove();
+        contador--;
+      }
+  </script>
+</body>
+</html>

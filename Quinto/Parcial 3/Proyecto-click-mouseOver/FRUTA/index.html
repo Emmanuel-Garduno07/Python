@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Frutas por Color</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <div class="tarjeta">
+    <div class="contenido-texto">
+      <h2 id="nombreFruta">Selecciona un color</h2>
+      <p id="descripcionFruta">Aquí aparecerá la descripción de la fruta.</p>
+    </div>
+    <div class="imagen">
+      <img id="imagenFruta" src="" alt="" style="display: none;">
+    </div>
+  </div>
+
+  <div class="botones">
+    <button class="boton-circular" onclick="mostrarFruta('amarillo')">A</button>
+    <button class="boton-circular" onclick="mostrarFruta('verde')">V</button>
+    <button class="boton-circular" onclick="mostrarFruta('naranja')">N</button>
+    <button class="boton-circular" onclick="mostrarFruta('morado')">M</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservar Cita</title>
+</head>
+<body>
+    <h2>Registrar Reservación</h2>
+    <form action="guardar.php" method="POST">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Servicio:</label><br>
+        <input type="text" name="servicio" required><br><br>
+
+        <label>Fecha:</label><br>
+        <input type="date" name="fecha" required><br><br>
+
+        <label>Hora:</label><br>
+        <input type="time" name="hora" required><br><br>
+
+        <input type="submit" value="Guardar">
+    </form>
+
+    <br><a href="mostrar.php">Ver Reservaciones</a>
+</body>
+</html>
